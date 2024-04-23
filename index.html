@@ -13,13 +13,13 @@
   <main>
     <section class="screen">
       <button class="view-toogle"></button>
-      <p id="back-row-el" class="back-row">0</p>
-      <input type="text" id="main-row-el" class="main-row" placeholder="0" readonly>
+      <p id="back-row-el" class="back-row"></p>
+      <input type="text" id="main-row-el" class="main-row" placeholder="0">
     </section>
     <section class="keypad">
       <div class="functions-pad">
         <button id="clear-btn">C</button>
-        <button>=</button>
+        <button onclick="result()">=</button>
         <button onclick="inputDisplay('.')">.</button>
       </div>
       <div class="main-pad">
@@ -36,10 +36,10 @@
           <button onclick="inputDisplay('0')">0</button>
         </div>
         <div class="operations-pad">
-          <button onclick="inputDisplay('+')">+</button>
-          <button onclick="inputDisplay('-')">-</button>
-          <button onclick="inputDisplay('*')">&#8727;</button>
-          <button onclick="inputDisplay('/')">/</button>
+          <button onclick="renderBackRow('+')">+</button>
+          <button onclick="renderBackRow('-')">-</button>
+          <button onclick="renderBackRow('*')">&#8727;</button>
+          <button onclick="renderBackRow('/')">/</button>
         </div>
       </div>
     </section>
